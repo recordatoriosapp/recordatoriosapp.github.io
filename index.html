@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recordatorios de Tareas CIC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+</head>
+<body>
+    <h1>RECORDATORIOS DE TAREAS CIC</h1>
+
+    <div id="inicio">
+        <ul id="task-list"></ul>
+    </div>
+
+    <div id="calendario" style="display: none;">
+        <div id="calendar"></div>
+    </div>
+
+    <div id="racha" style="display: none;">
+        <h2>Racha de Tareas Completadas</h2>
+        <p>Tareas completadas: <span id="racha-count">0</span></p>
+        <p id="motivational-message"></p>
+    </div>
+
+    <button id="add-task-btn" class="floating-btn">+</button>
+
+    <div id="task-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Nueva Tarea</h2>
+            <form id="task-form">
+                <label for="subject">Materia:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="task-title">Título de la tarea:</label>
+                <input type="text" id="task-title" name="task-title" required>
+                
+                <label for="due-date">Fecha de Presentación:</label>
+                <input type="date" id="due-date" name="due-date" required>
+                
+                <label for="due-time">Hora de Entrega:</label>
+                <input type="time" id="due-time" name="due-time" required>
+                
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <button id="nav-inicio" class="nav-btn active">Inicio</button>
+        <button id="nav-calendario" class="nav-btn">Calendario</button>
+        <button id="nav-racha" class="nav-btn">Racha</button>
+    </div>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script src="app.js"></script>
+</body>
+</html>
